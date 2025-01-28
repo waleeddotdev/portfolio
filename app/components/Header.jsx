@@ -2,8 +2,12 @@ const Header = () => {
     return (
         <div className="flex flex-row justify-between w-full items-start gap-0">
             <div className="w-full">
-                <h1 className="text-6xl text-balance leading-tight tracking-tight font-bold">Hi, I'm Waleed 👋</h1>
-                <h2 className="text-xl text-balance leading-tight">From code to design, bringing concepts to life with simplicity, style, and passion
+                <div className="text-4xl md:text-6xl flex flex-row gap-2 text-balance leading-tight tracking-tight font-bold">
+                    Hi, I'm Waleed
+                    {/* <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp" type="image/webp" /> */}
+                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" alt="👋" className="size-14" />
+                </div>
+                <h2 className=" text-base md:text-xl text-balance leading-tight">From code to design, bringing concepts to life with simplicity, style, and passion
                 </h2>
             </div>
             <div className="">

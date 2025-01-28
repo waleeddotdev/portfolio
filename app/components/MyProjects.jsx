@@ -13,7 +13,7 @@ const MyProjects = () => {
             </div>
             <div className="w-full grid-cols-1 sm:grid-cols-2 py-5 grid gap-5">
                 <ProjectCard name={"Snappet"} img={"/assets/projects/snappet/Banner.png"} description={"Snappet is a web app that allows developers to generate beautiful images of their code, making it easy to share on social media platforms such as Instagram, Twitter, and LinkedIn. With Snappet, you can showcase your coding skills in an attractive, engaging way by converting raw code into visually appealing images."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "ShadcnUI", "Monaco", "HTML to Image"]} />
-                {/* <ProjectCard name={"Snappet"} description={"Snappet is a web app that allows developers to generate beautiful images of their code, making it easy to share on social media platforms such as Instagram, Twitter, and LinkedIn. With Snappet, you can showcase your coding skills in an attractive, engaging way by converting raw code into visually appealing images."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "ShadcnUI", "Monaco", "HTML to Image"]} /> */}
+                <ProjectCard name={"Tanisha Web3 Consultant"} img={"/assets/projects/tanisha/banner.png"} description={"I worked with Web3 consultant Tanisha Katara to create her personal website with a CMS for easy content updates. I also integrated Google Sheets API for form submissions and Nodemailer for real-time email notifications."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS", "GoogleSheet Api", "Nodemailer", "Google Analytics"]} link={"https://tanishakatara.com/"} />
 
             </div>
         </div>
@@ -24,10 +24,12 @@ export default MyProjects
 
 const ProjectCard = ({ name, timeline, description, tech, link, img }) => {
     return (
-        <div className="w-full rounded-lg border border-white/15 overflow-hidden">
-            <div style={{ backgroundImage: "url(/assets/projects/snappet/Banner.png)" }} className="bg-white bg-cover w-full h-[180px]">
+        <div className="w-full rounded-lg group border h-fit border-white/15 overflow-hidden">
+
+            <div style={{ backgroundImage: `url(${img})` }} className="bg-white  bg-cover transition-all duration-300 w-full h-[180px]">
             </div>
-            <div className="space-y-0">
+
+            <div className="flex flex-col h-full items-center justify-between">
                 <div className="p-3 space-y-1 tracking-tight  leading-tight">
                     <p className="font-bold">{name}</p>
                     <p className="text-xs">{timeline}</p>

@@ -136,6 +136,20 @@ const Footer = ({ open }) => {
                                     >
                                         Whatsapp <IoIosArrowForward size={15} />
                                     </a>
+                                    <a
+                                        href="https://www.linkedin.com/in/waleeddotdev"
+                                        target="_blank"
+                                        className=" hover:text-white transition-all duration: 0.5 flex flex-row gap-1 items-center"
+                                    >
+                                        Linkedin <IoIosArrowForward size={15} />
+                                    </a>
+                                    <a
+                                        href="https://github.com/waleeddotdev"
+                                        target="_blank"
+                                        className=" hover:text-white transition-all duration: 0.5 flex flex-row gap-1 items-center"
+                                    >
+                                        Github <IoIosArrowForward size={15} />
+                                    </a>
                                     {/* <a
                                         href="/resume.pdf"
                                         target="_blank"
