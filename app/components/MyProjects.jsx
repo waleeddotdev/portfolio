@@ -12,6 +12,13 @@ const MyProjects = () => {
                 </h2>
             </div>
             <div className="w-full grid-cols-1 sm:grid-cols-2 py-5 grid gap-5">
+                <ProjectCard 
+  name={"HinglishMagic"} 
+  img={"/assets/projects/hinglishmagic.jpeg"} 
+  description={"HinglishMagic is a Chrome extension that converts pure Hindi text into Hinglish, making it easier to read and share. It’s perfect for content creators and social media users. The CEO of Submagic appreciated the project and showed interest in integrating it into their platform."} 
+  tech={["JavaScript", "Chrome Extension", "Gemini API", "DOM"]} 
+  link={"https://github.com/waleeddotdev/HinglishMagic"} 
+/>
                 <ProjectCard name={"Snappet"} img={"/assets/projects/snappet/Banner.png"} description={"Snappet is a web app that allows developers to generate beautiful images of their code, making it easy to share on social media platforms such as Instagram, Twitter, and LinkedIn. With Snappet, you can showcase your coding skills in an attractive, engaging way by converting raw code into visually appealing images."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "ShadcnUI", "Monaco", "HTML to Image"]} link={"https://snappetio.netlify.app/"}  />
                 <ProjectCard name={"Tanisha Web3 Consultant"} img={"/assets/projects/tanisha/banner.png"} description={"I worked with Web3 consultant Tanisha Katara to create her personal website with a CMS for easy content updates. I also integrated Google Sheets API for form submissions and Nodemailer for real-time email notifications."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS", "GoogleSheet Api", "Nodemailer", "Google Analytics"]} link={"https://tanishakatara.com/"} />
             </div>
