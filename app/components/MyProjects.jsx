@@ -47,8 +47,8 @@ const ProjectCard = ({ name, timeline, description, tech, link, img }) => {
                     <p className="text-xs">{timeline}</p>
                     <p className="text-xs tracking-normal leading-tight opacity-60">{description}</p>
                 </div>
-                <div className="p-3 space-y-2">
-                    <div className="flex flex-row gap-1 flex-wrap">
+                <div className="p-3 w-full space-y-2">
+                    <div className="flex w-full flex-row gap-1 flex-wrap">
                         {tech?.map((item, index) => <Badge key={index}>{item}</Badge>)}
                     </div>
                     {link && <a href={link} target="_blank" className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
