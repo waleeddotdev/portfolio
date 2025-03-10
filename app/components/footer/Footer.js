@@ -150,13 +150,13 @@ const Footer = ({ open }) => {
                                     >
                                         Github <IoIosArrowForward size={15} />
                                     </a>
-                                    {/* <a
-                                        href="/resume.pdf"
+ <a
+                                       href="/assets/resume.pdf"
                                         target="_blank"
                                         className=" hover:text-white transition-all duration: 0.5 flex flex-row gap-1 items-center"
-                                    >
+                                    download >
                                         Resume <IoIosArrowForward size={15} />
-                                    </a> */}
+                                    </a> 
                                 </motion.div>
                             )}
                         </AnimatePresence>
