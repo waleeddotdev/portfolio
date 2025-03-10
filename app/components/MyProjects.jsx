@@ -12,6 +12,12 @@ const MyProjects = () => {
                 </h2>
             </div>
             <div className="w-full grid-cols-1 sm:grid-cols-2 py-5 grid gap-5">
+               <ProjectCard 
+  name={"AI Captioning Tool"} 
+  img={"/assets/projects/caption.jpeg"} 
+  description={"This AI-powered SaaS makes adding animated captions, overlays, and transitions to videos fast and easy. As someone with a background in video editing, I understand the struggles creators face. This tool is built to save time and remove the hassle of manual editing while making videos look more professional and engaging."} 
+  tech={["Next.js", "Supabase", "Remotion", "Tailwind CSS", "AWS Lambda", "Cloudflare R2", "Stripe", "React"]} 
+/>
                 <ProjectCard 
   name={"HinglishMagic"} 
   img={"/assets/projects/hinglishmagic.jpeg"} 
