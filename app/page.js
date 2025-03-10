@@ -42,7 +42,7 @@ export default function Home() {
                 <MyProjects />
                 <Ending />
             </section>
-            <div className="w-full pointer-events-none  fixed h-screen pb-5 flex flex-col justify-end items-center">
+            <div className="w-full pointer-events-none  fixed h-[100dvh] pb-5 flex flex-col justify-end items-center">
                 {open && <Footer open={open} />}
                 {!open && <FooterClose open={open} />}
             </div>
