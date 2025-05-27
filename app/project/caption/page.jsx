@@ -33,7 +33,7 @@ const page = () => {
 
     return (
         <main ref={containerRef} className="flex bg-[#080808]   flex-col items-center justify-between">
-            <section className="max-w-3xl pb-96 md:pb-80 space-y-10 mt-10 w-full  h-full">
+            <section className="max-w-3xl px-5 md:px-0 pb-96 md:pb-80 space-y-10 mt-10 w-full  h-full">
                 <Header />
                 <Title />
                 <ImageGallery />

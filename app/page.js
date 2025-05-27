@@ -33,7 +33,7 @@ export default function Home() {
 
     return (
         <main ref={containerRef} className="flex bg-[#080808] min-h-screen  flex-col items-center justify-between">
-            <section className="max-w-3xl py-5 pb-96 md:pb-80 space-y-10 mt-10 w-full  h-full">
+            <section className="max-w-3xl px-5 md:px-0 py-5 pb-96 md:pb-80 space-y-10 mt-10 w-full  h-full">
                 <Header />
                 <About />
                 <WorkExperience />
@@ -42,7 +42,7 @@ export default function Home() {
                 <MyProjects />
                 <Ending />
             </section>
-            <div className="w-full pointer-events-none  fixed h-[100dvh] pb-5 flex flex-col justify-end items-center">
+            <div className="w-full pointer-events-none  fixed h-[100svh] pb-5 flex flex-col justify-end items-center">
                 {open && <Footer open={open} />}
                 {!open && <FooterClose open={open} />}
             </div>
