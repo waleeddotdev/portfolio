@@ -152,20 +152,20 @@ const ImageGallery = () => {
 
 const Title = () => {
     return (
-        <div>
-            <div className='flex flex-row gap-5 justify-between items-start'>
-                <div className='w-1/2'>
+        <div >
+            <div className='flex flex-col md:flex-row gap-5 justify-between items-start'>
+                <div className='w-full md:w-1/2'>
                     <div className='text-xs flex flex-row gap-1 items-center  opacity-60'><PiSuitcaseLight /> <span>Project</span></div>
                     <p className='font-bold text-lg'>AI Captioning Tool</p>
                 </div>
-                <div className='w-1/2'>
+                <div className='w-full md:w-1/2'>
                     <div className='text-xs flex flex-row gap-1 items-center mb-1 opacity-60'><span>Introduction</span></div>
                     <p className='text-xs text-balance font-medium'>This AI-powered SaaS makes adding animated captions, overlays, and transitions to videos fast and easy. As someone with a background in video editing, I understand the struggles creators face. This tool is built to save time and remove the hassle of manual editing while making videos look more professional and engaging.</p>
                 </div>
             </div>
             <div className='my-5'>
                 <p className='text-xs opacity-60 mb-1'>Stack</p>
-                <div className='flex flex-row gap-2 items-center'>
+                <div className='flex flex-row flex-wrap gap-2 items-center'>
                     {['Next.js', 'Supabase', 'Remotion', 'Tailwind CSS', 'AWS Lambda', 'Cloudflare R2', 'Stripe', 'React'].map((item, index) => (
                         <React.Fragment key={index}>
                             <p className='text-xs'>{item}</p>
