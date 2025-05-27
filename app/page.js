@@ -33,7 +33,7 @@ export default function Home() {
 
     return (
         <main ref={containerRef} className="flex bg-[#080808] min-h-screen  flex-col items-center justify-between">
-            <section className="max-w-2xl p-5 pb-96 md:pb-80 space-y-10 mt-10 w-full  h-full">
+            <section className="max-w-3xl py-5 pb-96 md:pb-80 space-y-10 mt-10 w-full  h-full">
                 <Header />
                 <About />
                 <WorkExperience />

@@ -30,7 +30,9 @@ const Skills = () => {
                 <Badge>Git</Badge>
                 <Badge>GitHub</Badge>
                 <Badge>Postman</Badge>
-
+                <Badge>Java</Badge>
+                <Badge>Node.js</Badge>
+                <Badge>Cloudflare</Badge>
 
             </div>
         </div>
