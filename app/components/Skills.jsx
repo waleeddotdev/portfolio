@@ -1,39 +1,54 @@
-import { Children } from "react"
+const strongSkills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React.js",
+    "Next.js",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Node.js",
+    "Express.js",
+    "Firebase",
+    "Git",
+    "GitHub",
+    "Electron.js",
+    "Figma",
+    "Zustand",
+    "Remotion",
+    "Stripe",
+    "Cloudflare R2",
+    "Supabase",
+    "MongoDB",
+    "Sanity CMS",
+    "Contentful CMS",
+    "Vercel",
+    "Netlify"
+];
+
+
+const learningSkills = [
+    "Bun",
+    "Hono",
+    "Web Sockets",
+    "C",
+    "Python",
+    "Java",
+    "OOP",
+    "DSA",
+    "Linux & CLI",
+];
+
+
 
 const Skills = () => {
     return (
         <div className="pb-4">
             <h4 className="text-xl text-balance font-bold leading-tight">Skills</h4>
             <div className="py-4 flex flex-row gap-1.5 flex-wrap">
-                <Badge>React</Badge>
-                <Badge>Next.js</Badge>
-                <Badge>Javascript</Badge>
-                <Badge>Node.js</Badge>
-                <Badge>Express.js</Badge>
-                <Badge>MongoDB</Badge>
-                <Badge>Python</Badge>
-                <Badge>C</Badge>
-                <Badge>HTML</Badge>
-                <Badge>CSS</Badge>
-                <Badge>SQLite</Badge>
-                <Badge>Postgres</Badge>
-                <Badge>Supabase</Badge>
-                <Badge>Firebase</Badge>
-                <Badge>Tailwind CSS</Badge>
-                <Badge>Selenium</Badge>
-                <Badge>Puppeteer</Badge>
-                <Badge>Figma</Badge>
-                <Badge>Framer Motion</Badge>
-                <Badge>Zustand</Badge>
-                <Badge>Sanity CMS</Badge>
-                <Badge>Firebase Messaging</Badge>
-                <Badge>Git</Badge>
-                <Badge>GitHub</Badge>
-                <Badge>Postman</Badge>
-                <Badge>Java</Badge>
-                <Badge>Node.js</Badge>
-                <Badge>Cloudflare</Badge>
-
+                {strongSkills.map((skill) => (
+                    <Badge key={skill}>{skill}</Badge>
+                ))}
             </div>
         </div>
     )
@@ -41,10 +56,23 @@ const Skills = () => {
 
 export default Skills
 
-const Badge = ({ children }) => {
+const Badge = ({ children, isLearning }) => {
     return (
-        <div className="text-xs hover:bg-white/80 transition-all duration-300 py-[3px] px-[8px] bg-white font-bold rounded-lg w-fit text-black">
+        <div className={`text-xs  transition-all duration-300 py-[3px] px-[8px] ${isLearning ? "text-white bg-white/15 hover:bg-white/25" : "text-black bg-white hover:bg-white/80"} font-bold rounded-lg w-fit`}>
             {children}
+        </div>
+    )
+}
+
+export const SkillsImCurrentlyLearning = () => {
+    return (
+        <div className="pb-4">
+            <h4 className="text-xl text-balance font-bold leading-tight">Skills I'm Currently Learning</h4>
+            <div className="py-4 flex flex-row gap-1.5 flex-wrap">
+                {learningSkills.map((skill) => (
+                    <Badge isLearning key={skill}>{skill}</Badge>
+                ))}
+            </div>
         </div>
     )
 }

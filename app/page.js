@@ -7,7 +7,7 @@ import Ending from "./components/Ending";
 import Footer from "./components/footer/Footer";
 import Header from "./components/Header";
 import MyProjects from "./components/MyProjects";
-import Skills from "./components/Skills";
+import Skills, { SkillsImCurrentlyLearning } from "./components/Skills";
 import WorkExperience from "./components/WorkExperience";
 import { useScroll } from "framer-motion";
 import FooterClose from "./components/footer/FooterClose";
@@ -39,6 +39,7 @@ export default function Home() {
                 <WorkExperience />
                 <Education />
                 <Skills />
+                <SkillsImCurrentlyLearning />
                 <MyProjects />
                 <Ending />
             </section>

@@ -7,14 +7,11 @@ const Header = () => {
                     {/* <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.webp" type="image/webp" /> */}
                     <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/512.gif" alt="👋" className="size-14" />
                 </div>
-                <h2 className=" text-base md:text-xl text-balance leading-tight">From code to design, bringing concepts to life with simplicity, style, and passion
-                </h2>
+                <h2 className=" text-base md:text-xl text-balance leading-tight">Full-Stack Developer Building High-Performing Web Applications</h2>
             </div>
-            <div className="">
-                <div
-                    style={{ backgroundImage: "url(/assets/profile-pic.png)", backgroundSize: "110%" }}
-                    className="size-[130px] bg-cover bg-center rounded-full bg-white/10 border border-white/15">
-                </div>
+            <div className="flex items-center justify-center min-w-[130px] h-[130px]">
+                <img src="/assets/profile-pic.png" alt="profile picture"
+                    className="w-full h-full object-cover rounded-full bg-white/10 border border-white/15" />
             </div>
         </div>
     )
