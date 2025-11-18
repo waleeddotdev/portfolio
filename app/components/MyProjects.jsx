@@ -25,6 +25,13 @@ const MyProjects = () => {
                     casestudy={'/project/caption'}
                 />
                 <ProjectCard
+                    name={"Governance AI Agent"}
+                    img={"/assets/projects/govai/cover.png"}
+                    description={"I built this automation to monitor governance proposals across selected protocols. It checks for new proposals or status changes then posts updates to Twitter with no manual work. I also made an admin page where the team can review tweets, edit them, and manage the tracked protocols. The system runs on n8n and delivers a full workflow for a live governance bot."}
+                    tech={["Next.js", "n8n", "Supabase", "ShadcnUI", "Twitter API", "Gemini API"]}
+                    link={"https://x.com/EthereumGovAI"}
+                />
+                  <ProjectCard
                     name={"Snappet CLI"}
                     img={"/assets/projects/snappetcli/cover.png"}
                     description={"To expand on my original Snappet app, I built this CLI version as an NPM package. This Node.js tool uses Puppeteer for headless browser automation, allowing developers to generate code screenshots directly from their terminal for a much faster workflow."}
