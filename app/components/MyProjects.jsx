@@ -12,7 +12,7 @@ const MyProjects = () => {
         <div id="projects" className="py-10">
             <div className="flex flex-col gap-2 items-center justify-center">
                 <h4 className=" text-balance tracking-tight  leading-tight text-base hover:bg-white/80 transition-all duration-300 py-1 px-3 bg-white font-medium rounded-lg w-fit text-black">My Projects</h4>
-                <h1 className="text-5xl text-balance leading-tight tracking-tight text-center font-bold">Check out my latest work</h1>
+                <h1 className="text-5xl text-balance leading-tight tracking-tighter text-center font-bold ">Check out my latest work</h1>
                 <h2 className="text-xl opacity-60 text-balance text-center leading-tight">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
                 </h2>
             </div>
@@ -30,20 +30,16 @@ const MyProjects = () => {
                     description={"I built this automation to monitor governance proposals across selected protocols. It checks for new proposals or status changes then posts updates to Twitter with no manual work. I also made an admin page where the team can review tweets, edit them, and manage the tracked protocols. The system runs on n8n and delivers a full workflow for a live governance bot."}
                     tech={["Next.js", "n8n", "Supabase", "ShadcnUI", "Twitter API", "Gemini API"]}
                     link={"https://x.com/EthereumGovAI"}
+                    casestudy={'/project/ai-agent'}
                 />
-                  <ProjectCard
-                    name={"Snappet CLI"}
-                    img={"/assets/projects/snappetcli/cover.png"}
-                    description={"To expand on my original Snappet app, I built this CLI version as an NPM package. This Node.js tool uses Puppeteer for headless browser automation, allowing developers to generate code screenshots directly from their terminal for a much faster workflow."}
-                    tech={["JavaScript", "Node.js", "Puppeteer", "DOM"]}
-                    link={"https://github.com/waleeddotdev/Snappet-CLI"}
-                />
+
                 <ProjectCard
                     name={"HinglishMagic"}
                     img={"/assets/projects/hinglishmagic.jpeg"}
                     description={"As a user of the Submagic tool, I needed Hinglish captions, but the app only generated Hindi. I took the initiative to build this Chrome extension to solve my own problem. It converts the Hindi output into easy-to-read Hinglish. The CEO of Submagic loved the idea and later added the feature to their official product."}
                     tech={["JavaScript", "Chrome Extension", "Gemini API", "DOM"]}
                     link={"https://github.com/waleeddotdev/HinglishMagic"}
+                    casestudy={"project/submagic"}
                 />
                 <ProjectCard
                     name={"Match-Cut AI (Micro Saas)"}
@@ -52,8 +48,17 @@ const MyProjects = () => {
                     tech={["Next.js", "Supabase", "Remotion", "Tailwind CSS", "AWS Lambda", "Cloudflare R2", "Stripe", "React", "ShadcnUI"]}
                 // casestudy={'/project/caption'}
                 />
-                <ProjectCard name={"Snappet"} img={"/assets/projects/snappet/Banner.png"} description={"As a developer, I wanted a better way to share code snippets online. I built this tool with Next.js and Framer Motion to create a polished, engaging UI. The core feature converts styled HTML directly into a downloadable image, which was a fun frontend challenge."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "ShadcnUI", "Monaco", "HTML to Image"]} link={"https://snappetio.netlify.app/"} />
+                <ProjectCard name={"Anya Website"} img={"/assets/projects/anya.png"} description={"I built this landing page for Anya, a Web3 game. I added a CMS for easy content updates, a blog section, and an interactive map feature. The final result looks clean and engaging."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS", "React Bits"]} link={"https://anyacity.netlify.app/"} />
                 <ProjectCard name={"Tanisha Web3 Consultant"} img={"/assets/projects/tanisha/banner.png"} description={"I delivered a complete website solution for a client who needed full control over her content. By integrating a Sanity CMS and automating her contact form with Google Sheets and Nodemailer, I built a system that empowered her to manage her business independently."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS", "GoogleSheet Api", "Nodemailer", "Google Analytics"]} link={"https://tanishakatara.com/"} />
+                <ProjectCard name={"Snappet"} img={"/assets/projects/snappet/Banner.png"} description={"As a developer, I wanted a better way to share code snippets online. I built this tool with Next.js and Framer Motion to create a polished, engaging UI. The core feature converts styled HTML directly into a downloadable image, which was a fun frontend challenge."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "ShadcnUI", "Monaco", "HTML to Image"]} link={"https://snappetio.netlify.app/"} />
+                <ProjectCard
+                    name={"Snappet CLI"}
+                    img={"/assets/projects/snappetcli/cover.png"}
+                    description={"To expand on my original Snappet app, I built this CLI version as an NPM package. This Node.js tool uses Puppeteer for headless browser automation, allowing developers to generate code screenshots directly from their terminal for a much faster workflow."}
+                    tech={["JavaScript", "Node.js", "Puppeteer", "DOM"]}
+                    link={"https://github.com/waleeddotdev/Snappet-CLI"}
+                />
+
             </div>
         </div>
     )
@@ -62,9 +67,9 @@ const MyProjects = () => {
 export default MyProjects
 
 const ProjectCard = ({ name, timeline, description, tech, link, img, casestudy }) => {
-    if (casestudy || link) {
+
         return (
-            <Link href={link ? link : casestudy} target={link ? "_blank" : "_self"} className="w-full hover:scale-[1.01] rounded-lg group h-fit hover:ring-[6px] ring-[1px] ring-white/15 overflow-hidden transition-all">
+            <div className="w-full hover:scale-[1.01] rounded-lg group h-fit hover:ring-[6px] ring-[1px] ring-white/15 overflow-hidden transition-all">
                 <Image alt={name} style={{ objectFit: "cover", maxHeight: "205px", width: "100%", scale: "1.04" }} src={img} width={400} height={400} />
                 <div className="flex flex-col h-full items-center justify-between group-hover:bg-gradient-to-t group-hover:from-white/10 group-hover:to-transparent transition-all duration-300">
                     <div className="p-4 space-y-1 tracking-tight  leading-tight">
@@ -76,38 +81,40 @@ const ProjectCard = ({ name, timeline, description, tech, link, img, casestudy }
                         <div className="flex w-full flex-row gap-1 flex-wrap">
                             {tech?.map((item, index) => <Badge key={index}>{item}</Badge>)}
                         </div>
-                        <div className="flex flex-row justify-between w-full">
-                            {(link || casestudy) ? <div className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
-                                {link ? <FiGlobe /> : <BiBookOpen />}  {link ? 'Website' : 'Case Study'}
-                            </div> : <div className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">Coming Soon</div>}
+                        <div className="flex flex-row justify-start gap-2 w-full">
+                          <div className={"flex flex-row justify-start gap-2 w-full"}>
+                              {(link && casestudy) ? (
+                                  <>
+                                      <Link href={link} target={"_blank"} className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
+                                          <FiGlobe /> Website
+                                      </Link>
+                                      <Link href={casestudy} target={"_self"} className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
+                                          <BiBookOpen /> Case Study
+                                      </Link>
+                                  </>
+                              ) : null}
+                              {(link && !casestudy) ? (
+                                  <Link href={link} target={"_blank"} className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
+                                      <FiGlobe /> Website
+                                  </Link>
+                              ) : null}
+                              {(!link && casestudy) ? (
+                                  <Link href={casestudy} target={"_self"} className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
+                                      <BiBookOpen /> Case Study
+                                  </Link>
+                              ) : null}
+                              {(!link && !casestudy) ? (
+                                  <div className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">Coming Soon</div>
+                              ) : null}
+                          </div>
                             <GoArrowUpRight className="opacity-0 group-hover:opacity-100 transition-all duration-200" />
                         </div>
 
                     </div>
                 </div>
-            </Link>
-        )
-    } else {
-        return (
-            <div href={link ? link : casestudy} target={link ? "_blank" : "_self"} className="w-full hover:scale-[1.01] rounded-lg group h-fit hover:ring-[6px] ring-[1px] ring-white/15 overflow-hidden transition-all">
-                <Image alt={name} style={{ objectFit: "cover", maxHeight: "205px", width: "100%", scale: "1.04" }} src={img} width={400} height={400} />
-                <div className="flex flex-col h-full items-center justify-between group-hover:bg-gradient-to-t group-hover:from-white/10 group-hover:to-transparent transition-all duration-300">
-                    <div className="p-4 space-y-1 tracking-tight  leading-tight">
-                        <p className="font-bold">{name}</p>
-                        <p className="text-xs">{timeline}</p>
-                        <p className="text-xs tracking-normal leading-tight opacity-60">{description}</p>
-                    </div>
-                    <div className="p-4 w-full space-y-2 ">
-                        <div className="flex w-full flex-row gap-1 flex-wrap">
-                            {tech?.map((item, index) => <Badge key={index}>{item}</Badge>)}
-                        </div>
-                        <div className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">Coming Soon</div>
-
-                    </div>
-                </div>
             </div>
         )
-    }
+
 }
 
 

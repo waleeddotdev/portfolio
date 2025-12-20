@@ -2,15 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import About from "./components/About";
-import Education from "./components/Education";
 import Ending from "./components/Ending";
 import Footer from "./components/footer/Footer";
-import Header from "./components/Header";
 import MyProjects from "./components/MyProjects";
-import Skills, { SkillsImCurrentlyLearning } from "./components/Skills";
-import WorkExperience from "./components/WorkExperience";
 import { useScroll } from "framer-motion";
 import FooterClose from "./components/footer/FooterClose";
+import New_Header from "@/app/components/new/New_Header";
+import WorkExperience from "@/app/components/WorkExperience";
+import Education from "@/app/components/Education";
+import Skills from "@/app/components/Skills";
+import Header from "@/app/components/Header";
 
 export default function Home() {
 
@@ -33,13 +34,14 @@ export default function Home() {
 
     return (
         <main ref={containerRef} className="flex bg-[#080808] min-h-screen  flex-col items-center justify-between">
-            <section className="max-w-3xl px-5 md:px-0 py-5 pb-96 md:pb-80 space-y-10 mt-10 w-full  h-full">
-                <Header />
+            <section className="max-w-3xl px-5 space-y-5 md:px-0  pb-96 md:pb-80 w-full  h-full">
+                {/*<New_Header />*/}
+                <Header/>
                 <About />
                 <WorkExperience />
                 <Education />
                 <Skills />
-                <SkillsImCurrentlyLearning />
+                {/*<SkillsImCurrentlyLearning />*/}
                 <MyProjects />
                 <Ending />
             </section>

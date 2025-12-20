@@ -1,7 +1,7 @@
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const dm_sans = DM_Sans({ subsets: ['latin'] })
 
 export const metadata = {
     title: "Waleed Nasir | Portfolio",
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${inter.className} antialiased`}
+                className={`${dm_sans.className} antialiased`}
             >
                 {children}
             </body>

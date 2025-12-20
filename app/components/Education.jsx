@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 const Education = () => {
     return (
         <div id="education" className="">
-            <h4 className="text-xl text-balance font-bold leading-tight">Education</h4>
+            <h4 className="text-xl text-balance font-bold leading-tight tracking-tight">Education</h4>
             <div className="flex flex-col gap-5 py-4">
                 <EducationCard college={"GIFT Univeristy"} timeline={"Present"} description={"Bachelor in Data Science"} />
                 <EducationCard college={"KIPS College"} timeline={"2021 - 2023"} description={"Intermedite in Computer Science"} />

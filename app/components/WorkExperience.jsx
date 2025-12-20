@@ -5,7 +5,7 @@ import { BsGlobe2 } from "react-icons/bs";
 const WorkExperience = () => {
     return (
         <div id="experience" className="">
-            <h4 className="text-xl text-balance font-bold leading-tight">Work Experience</h4>
+            <h4 className="text-xl text-balance font-bold leading-tight tracking-tight">Work Experience</h4>
             <div className="flex flex-col gap-5 py-4">
                 <WorkCard company={"Freelancer"} points={[
                     "Worked directly with clients to plan project goals and turn their ideas into clear requirements.",

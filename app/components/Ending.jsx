@@ -5,7 +5,7 @@ const Ending = () => {
         <>
             <div className="flex py-20 flex-col gap-2 items-center justify-center">
                 <h4 className=" text-balance tracking-tight  leading-tight text-base hover:bg-white/80 transition-all duration-300 py-1 px-3 bg-white font-medium rounded-lg w-fit text-black">Creative Coder</h4>
-                <h1 className="text-5xl text-center text-balance leading-tight tracking-tight font-bold">I like building things</h1>
+                <h1 className="text-5xl text-center text-balance leading-tight tracking-tighter font-bold">I like building things</h1>
                 <h2 className="text-xl opacity-60 text-balance text-center leading-tight">I‘m all about building cool things! Whether it‘s spinning up web apps, designing smooth UIs, or giving brands a fresh facelift, I‘ve had a great time collaborating with some amazing clients. I thrive on bringing innovative solutions to the table and making sure every project is as fun as it is functional. Let‘s create something awesome and have a blast doing it!
                 </h2>
             </div>

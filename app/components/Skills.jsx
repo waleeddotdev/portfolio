@@ -44,7 +44,7 @@ const learningSkills = [
 const Skills = () => {
     return (
         <div className="pb-4">
-            <h4 className="text-xl text-balance font-bold leading-tight">Skills</h4>
+            <h4 className="text-xl text-balance font-bold leading-tight tracking-tight">Skills</h4>
             <div className="py-4 flex flex-row gap-1.5 flex-wrap">
                 {strongSkills.map((skill) => (
                     <Badge key={skill}>{skill}</Badge>
