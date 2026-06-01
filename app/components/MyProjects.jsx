@@ -1,11 +1,8 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { BiBookOpen } from "react-icons/bi";
 import { FiGlobe } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
-
-
 
 const MyProjects = () => {
     return (
@@ -79,64 +76,101 @@ const MyProjects = () => {
     )
 }
 
-export default MyProjects
+export default MyProjects;
 
-const ProjectCard = ({ name, timeline, description, tech, link, img, casestudy }) => {
-
-        return (
-            <div className="w-full hover:scale-[1.01] rounded-lg group h-fit hover:ring-[6px] ring-[1px] ring-white/15 overflow-hidden transition-all">
-                <Image alt={name} style={{ objectFit: "cover", maxHeight: "205px", width: "100%", scale: "1.04" }} src={img} width={400} height={400} />
-                <div className="flex flex-col h-full items-center justify-between group-hover:bg-gradient-to-t group-hover:from-white/10 group-hover:to-transparent transition-all duration-300">
-                    <div className="p-4 space-y-1 tracking-tight  leading-tight">
-                        <p className="font-bold">{name}</p>
-                        <p className="text-xs">{timeline}</p>
-                        <p className="text-xs tracking-normal leading-tight opacity-60">{description}</p>
-                    </div>
-                    <div className="p-4 w-full space-y-2 ">
-                        <div className="flex w-full flex-row gap-1 flex-wrap">
-                            {tech?.map((item, index) => <Badge key={index}>{item}</Badge>)}
-                        </div>
-                        <div className="flex flex-row justify-start gap-2 w-full">
-                          <div className={"flex flex-row justify-start gap-2 w-full"}>
-                              {(link && casestudy) ? (
-                                  <>
-                                      <Link href={link} target={"_blank"} className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
-                                          <FiGlobe /> Website
-                                      </Link>
-                                      <Link href={casestudy} target={"_self"} className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
-                                          <BiBookOpen /> Case Study
-                                      </Link>
-                                  </>
-                              ) : null}
-                              {(link && !casestudy) ? (
-                                  <Link href={link} target={"_blank"} className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
-                                      <FiGlobe /> Website
-                                  </Link>
-                              ) : null}
-                              {(!link && casestudy) ? (
-                                  <Link href={casestudy} target={"_self"} className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
-                                      <BiBookOpen /> Case Study
-                                  </Link>
-                              ) : null}
-                              {(!link && !casestudy) ? (
-                                  <div className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">Coming Soon</div>
-                              ) : null}
-                          </div>
-                            <GoArrowUpRight className="opacity-0 group-hover:opacity-100 transition-all duration-200" />
-                        </div>
-
-                    </div>
+const ProjectCard = ({
+  name,
+  timeline,
+  description,
+  tech,
+  link,
+  img,
+  casestudy,
+}) => {
+  return (
+    <div className="w-full hover:scale-[1.01] rounded-lg group h-fit hover:ring-[6px] ring-[1px] ring-white/15 overflow-hidden transition-all">
+      <Image
+        alt={name}
+        style={{
+          objectFit: "cover",
+          maxHeight: "205px",
+          width: "100%",
+          scale: "1.04",
+        }}
+        src={img}
+        width={400}
+        height={400}
+      />
+      <div className="flex flex-col h-full items-center justify-between group-hover:bg-gradient-to-t group-hover:from-white/10 group-hover:to-transparent transition-all duration-300">
+        <div className="p-4 space-y-1 tracking-tight  leading-tight">
+          <p className="font-bold">{name}</p>
+          <p className="text-xs">{timeline}</p>
+          <p className="text-xs tracking-normal leading-tight opacity-60">
+            {description}
+          </p>
+        </div>
+        <div className="p-4 w-full space-y-2 ">
+          <div className="flex w-full flex-row gap-1 flex-wrap">
+            {tech?.map((item, index) => (
+              <Badge key={index}>{item}</Badge>
+            ))}
+          </div>
+          <div className="flex flex-row justify-start gap-2 w-full">
+            <div className={"flex flex-row justify-start gap-2 w-full"}>
+              {link && casestudy ? (
+                <>
+                  <Link
+                    href={link}
+                    target={"_blank"}
+                    className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center"
+                  >
+                    <FiGlobe /> Website
+                  </Link>
+                  <Link
+                    href={casestudy}
+                    target={"_self"}
+                    className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center"
+                  >
+                    <BiBookOpen /> Case Study
+                  </Link>
+                </>
+              ) : null}
+              {link && !casestudy ? (
+                <Link
+                  href={link}
+                  target={"_blank"}
+                  className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center"
+                >
+                  <FiGlobe /> Website
+                </Link>
+              ) : null}
+              {!link && casestudy ? (
+                <Link
+                  href={casestudy}
+                  target={"_self"}
+                  className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center"
+                >
+                  <BiBookOpen /> Case Study
+                </Link>
+              ) : null}
+              {!link && !casestudy ? (
+                <div className="text-xs font-medium cursor-pointer hover:bg-white/80 transition-all duration-300 text-black bg-white py-[2.5px] px-[8px] rounded-md w-fit flex flex-row gap-1 justify-center items-center">
+                  Coming Soon
                 </div>
+              ) : null}
             </div>
-        )
-
-}
-
+            <GoArrowUpRight className="opacity-0 group-hover:opacity-100 transition-all duration-200" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Badge = ({ children }) => {
-    return (
-        <div className="text-[10px] hover:bg-white/5 transition-all duration-300 py-[2px] px-[6px] bg-white/15 font-bold rounded-md w-fit text-white">
-            {children}
-        </div>
-    )
-}
+  return (
+    <div className="text-[10px] hover:bg-white/5 transition-all duration-300 py-[2px] px-[6px] bg-white/15 font-bold rounded-md w-fit text-white">
+      {children}
+    </div>
+  );
+};
