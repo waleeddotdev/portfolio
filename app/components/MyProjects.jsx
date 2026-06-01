@@ -25,12 +25,27 @@ const MyProjects = () => {
                     casestudy={'/project/caption'}
                 />
                 <ProjectCard
+                    name={"Ludi"}
+                    img={"/assets/projects/ludi/cover.png"}
+                    description={"A social network for gamers to review, catalog, and rank games—similar to Letterboxd. It features a custom ranking algorithm that ranks games dynamically based on user choices in a comparison mini-game. Developed using React Native and Convex, the app is currently in closed-beta testing for iOS and Android."}
+                    tech={["React Native", "Expo", "Convex", "Clerk", "Firebase FCM", "Expo Notifications", "Tailwind CSS"]}
+                    link={"https://ludi.social"}
+                    casestudy={'/project/ludi'}
+                />
+                <ProjectCard
                     name={"Governance AI Agent"}
                     img={"/assets/projects/govai/cover.png"}
                     description={"I built this automation to monitor governance proposals across selected protocols. It checks for new proposals or status changes then posts updates to Twitter with no manual work. I also made an admin page where the team can review tweets, edit them, and manage the tracked protocols. The system runs on n8n and delivers a full workflow for a live governance bot."}
                     tech={["Next.js", "n8n", "Supabase", "ShadcnUI", "Twitter API", "Gemini API"]}
                     link={"https://x.com/EthereumGovAI"}
                     casestudy={'/project/ai-agent'}
+                />
+                <ProjectCard
+                    name={"Neurogence"}
+                    img={"/assets/projects/neurogence.png"}
+                    description={"A structured learning intelligence system designed to help ABA therapists and specialists capture session activity, understand support delivery, and track progress over time. Developed to turn quiet session signals into clear, actionable progress metrics, the platform is currently under active development."}
+                    tech={["Next.js", "React", "Tailwind CSS", "Healthcare Tech"]}
+                    link={"https://neurogence.ai/"}
                 />
 
                 <ProjectCard
@@ -46,7 +61,7 @@ const MyProjects = () => {
                     img={"/assets/projects/matchcut/cover.png"}
                     description={"Creating cinematic match cuts is a huge challenge for video editors. This in-progress tool solves that by using AI to generate them automatically. It uses Remotion for programmatic video creation and AWS Lambda for serverless rendering, allowing creators to generate professional match cuts automatically and save hours of work."}
                     tech={["Next.js", "Supabase", "Remotion", "Tailwind CSS", "AWS Lambda", "Cloudflare R2", "Stripe", "React", "ShadcnUI"]}
-                // casestudy={'/project/caption'}
+                    casestudy={'/project/matchcut'}
                 />
                 <ProjectCard name={"Anya Website"} img={"/assets/projects/anya.png"} description={"I built this landing page for Anya, a Web3 game. I added a CMS for easy content updates, a blog section, and an interactive map feature. The final result looks clean and engaging."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS", "React Bits"]} link={"https://anyacity.netlify.app/"} />
                 <ProjectCard name={"Tanisha Web3 Consultant"} img={"/assets/projects/tanisha/banner.png"} description={"I delivered a complete website solution for a client who needed full control over her content. By integrating a Sanity CMS and automating her contact form with Google Sheets and Nodemailer, I built a system that empowered her to manage her business independently."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS", "GoogleSheet Api", "Nodemailer", "Google Analytics"]} link={"https://tanishakatara.com/"} />

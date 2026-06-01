@@ -1,12 +1,23 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { BsGlobe2 } from "react-icons/bs";
-
+import ludiImage from '../../public/assets/ludi.png'
+import Image from "next/image";
 
 const WorkExperience = () => {
     return (
         <div id="experience" className="">
             <h4 className="text-xl text-balance font-bold leading-tight tracking-tight">Work Experience</h4>
             <div className="flex flex-col gap-5 py-4">
+                <WorkCard png={ludiImage} company={"Ludi Social"} jobTitle={"Lead Developer"} points={[
+                    "Built the entire application from scratch as the sole developer.",
+                    "Developed the full stack system including frontend, backend, and database.",
+                    "Implemented Convex as the backend infrastructure for real-time data handling.",
+                    "Integrated external APIs including the Twitch API to fetch the latest game data.",
+                    "Designed and built the complete UI and UX system from scratch.",
+                    "Developed a custom ranking algorithm for game scoring and dynamic list sorting.",
+                    "Managed API integrations, data flows, and the overall system architecture.",
+                    "Configured production-level setups, closed-beta testing pipelines, and performance improvements."
+                ]} description={"As the sole Lead Developer, I built and launched the Ludi Social mobile app from scratch, handling the full stack architecture, real-time database syncing, custom ranking algorithms, and beta testing pipelines."} timeline={"Jan 2026 - Present"} />
                 <WorkCard company={"Freelancer"} points={[
                     "Worked directly with clients to plan project goals and turn their ideas into clear requirements.",
                     "Focused on building responsive websites that work perfectly on desktops, tablets, and phones.",
@@ -26,13 +37,16 @@ const WorkExperience = () => {
 
 export default WorkExperience
 
-const WorkCard = ({ company, jobTitle, description, timeline, icon, points }) => {
+const WorkCard = ({ company, jobTitle, description, timeline, icon, points, png }) => {
     return (
         <div className="flex cursor-pointer w-full flex-row group gap-4">
             <div>
                 {icon ? <div
                     className="size-[50px] text-3xl text-black/80 bg-cover bg-center flex justify-center items-center rounded-full bg-white border border-white/15">
                     {icon}
+                </div> : png ? <div
+                    className="size-[50px] bg-cover bg-center flex overflow-hidden justify-center items-center rounded-full bg-white border border-white/15">
+                    <Image src={png} alt={company} width={50} height={50} />
                 </div> : <div
                     className="size-[50px] text-white/30 bg-cover bg-center flex justify-center items-center rounded-full bg-white/10 border border-white/15">
                     {company[0]}
