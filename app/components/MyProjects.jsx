@@ -5,76 +5,192 @@ import { FiGlobe } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 
 const MyProjects = () => {
-    return (
-        <div id="projects" className="py-10">
-            <div className="flex flex-col gap-2 items-center justify-center">
-                <h4 className=" text-balance tracking-tight  leading-tight text-base hover:bg-white/80 transition-all duration-300 py-1 px-3 bg-white font-medium rounded-lg w-fit text-black">My Projects</h4>
-                <h1 className="text-5xl text-balance leading-tight tracking-tighter text-center font-bold ">Check out my latest work</h1>
-                <h2 className="text-xl opacity-60 text-balance text-center leading-tight">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
-                </h2>
-            </div>
-            <div className="w-full grid-cols-1 sm:grid-cols-2 py-5 grid gap-5">
-                <ProjectCard
-                    name={"AI Captioning Tool"}
-                    img={"/assets/projects/caption.jpg"}
-                    description={"I built this full-stack SaaS to solve a problem I faced as a video editor. It uses Remotion for programmatic video creation and AWS Lambda for serverless rendering, allowing creators to generate professional animated captions automatically and save hours of work."}
-                    tech={["Next.js", "Supabase", "Remotion", "Tailwind CSS", "AWS Lambda", "Cloudflare R2", "Stripe", "React"]}
-                    casestudy={'/project/caption'}
-                />
-                <ProjectCard
-                    name={"Ludi"}
-                    img={"/assets/projects/ludi/cover.png"}
-                    description={"A social network for gamers to review, catalog, and rank games—similar to Letterboxd. It features a custom ranking algorithm that ranks games dynamically based on user choices in a comparison mini-game. Developed using React Native and Convex, the app is currently in closed-beta testing for iOS and Android."}
-                    tech={["React Native", "Expo", "Convex", "Clerk", "Firebase FCM", "Expo Notifications", "Tailwind CSS"]}
-                    link={"https://ludi.social"}
-                    casestudy={'/project/ludi'}
-                />
-                <ProjectCard
-                    name={"Governance AI Agent"}
-                    img={"/assets/projects/govai/cover.png"}
-                    description={"I built this automation to monitor governance proposals across selected protocols. It checks for new proposals or status changes then posts updates to Twitter with no manual work. I also made an admin page where the team can review tweets, edit them, and manage the tracked protocols. The system runs on n8n and delivers a full workflow for a live governance bot."}
-                    tech={["Next.js", "n8n", "Supabase", "ShadcnUI", "Twitter API", "Gemini API"]}
-                    link={"https://x.com/EthereumGovAI"}
-                    casestudy={'/project/ai-agent'}
-                />
-                <ProjectCard
-                    name={"Neurogence"}
-                    img={"/assets/projects/neurogence.png"}
-                    description={"A structured learning intelligence system designed to help ABA therapists and specialists capture session activity, understand support delivery, and track progress over time. Developed to turn quiet session signals into clear, actionable progress metrics, the platform is currently under active development."}
-                    tech={["Next.js", "React", "Tailwind CSS", "Healthcare Tech"]}
-                    link={"https://neurogence.ai/"}
-                />
+  return (
+    <div id="projects" className="py-10">
+      <div className="flex flex-col gap-2 items-center justify-center">
+        <h4 className=" text-balance tracking-tight  leading-tight text-base hover:bg-white/80 transition-all duration-300 py-1 px-3 bg-white font-medium rounded-lg w-fit text-black">
+          My Projects
+        </h4>
+        <h1 className="text-5xl text-balance leading-tight tracking-tighter text-center font-bold ">
+          Check out my latest work
+        </h1>
+        <h2 className="text-xl opacity-60 text-balance text-center leading-tight">
+          I've worked on a variety of projects, from simple websites to complex
+          web applications. Here are a few of my favorites.
+        </h2>
+      </div>
+      <div className="w-full grid-cols-1 sm:grid-cols-2 py-5 grid gap-5">
+        <ProjectCard
+          name={"AI Captioning Tool"}
+          img={"/assets/projects/caption.jpg"}
+          description={
+            "I built this full-stack SaaS to solve a problem I faced as a video editor. It uses Remotion for programmatic video creation and AWS Lambda for serverless rendering, allowing creators to generate professional animated captions automatically and save hours of work."
+          }
+          tech={[
+            "Next.js",
+            "Supabase",
+            "Remotion",
+            "Tailwind CSS",
+            "AWS Lambda",
+            "Cloudflare R2",
+            "Stripe",
+            "React",
+          ]}
+          casestudy={"/project/caption"}
+        />
+        <ProjectCard
+          name={"Ludi"}
+          img={"/assets/projects/ludi/cover.png"}
+          description={
+            "A social network for gamers to review, catalog, and rank games—similar to Letterboxd. It features a custom ranking algorithm that ranks games dynamically based on user choices in a comparison mini-game. Developed using React Native and Convex, the app is currently in closed-beta testing for iOS and Android."
+          }
+          tech={[
+            "React Native",
+            "Expo",
+            "Convex",
+            "Clerk",
+            "Firebase FCM",
+            "Expo Notifications",
+            "Tailwind CSS",
+          ]}
+          link={"https://ludi.social"}
+          casestudy={"/project/ludi"}
+        />
+        <ProjectCard
+          name={"Neurogence"}
+          img={"/assets/projects/neurogence.png"}
+          description={
+            "A structured learning intelligence system designed to help ABA therapists and specialists capture session activity, understand support delivery, and track progress over time. Developed to turn quiet session signals into clear, actionable progress metrics, the platform is currently under active development."
+          }
+          tech={["Next.js", "React", "Tailwind CSS", "Healthcare Tech"]}
+          link={"https://neurogence.ai/"}
+        />
+        <ProjectCard
+          name={"Grand Masti Tours"}
+          img={"/assets/projects/gmt/banner.png"}
+          description={
+            "A Tour Management System built for our university database project. Travellers can create private trip plans, invite friends to collaborate, and plan routes on an interactive map. Businesses can create profiles, design trip packages, set margins, and publish them to a marketplace. The platform also includes booking management, announcements, and a dedicated admin panel to manage users, trips, and overall system activity."
+          }
+          tech={[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP",
+            "MySQL",
+            "Google Places API",
+            "Leaflet.js",
+            "Lucide Icons",
+          ]}
+          casestudy={"project/gmt"}
+        />
+        <ProjectCard
+          name={"Governance AI Agent"}
+          img={"/assets/projects/govai/cover.png"}
+          description={
+            "I built this automation to monitor governance proposals across selected protocols. It checks for new proposals or status changes then posts updates to Twitter with no manual work. I also made an admin page where the team can review tweets, edit them, and manage the tracked protocols. The system runs on n8n and delivers a full workflow for a live governance bot."
+          }
+          tech={[
+            "Next.js",
+            "n8n",
+            "Supabase",
+            "ShadcnUI",
+            "Twitter API",
+            "Gemini API",
+          ]}
+          link={"https://x.com/EthereumGovAI"}
+          casestudy={"/project/ai-agent"}
+        />
 
-                <ProjectCard
-                    name={"HinglishMagic"}
-                    img={"/assets/projects/hinglishmagic.jpeg"}
-                    description={"As a user of the Submagic tool, I needed Hinglish captions, but the app only generated Hindi. I took the initiative to build this Chrome extension to solve my own problem. It converts the Hindi output into easy-to-read Hinglish. The CEO of Submagic loved the idea and later added the feature to their official product."}
-                    tech={["JavaScript", "Chrome Extension", "Gemini API", "DOM"]}
-                    link={"https://github.com/waleeddotdev/HinglishMagic"}
-                    casestudy={"project/submagic"}
-                />
-                <ProjectCard
-                    name={"Match-Cut AI (Micro Saas)"}
-                    img={"/assets/projects/matchcut/cover.png"}
-                    description={"Creating cinematic match cuts is a huge challenge for video editors. This in-progress tool solves that by using AI to generate them automatically. It uses Remotion for programmatic video creation and AWS Lambda for serverless rendering, allowing creators to generate professional match cuts automatically and save hours of work."}
-                    tech={["Next.js", "Supabase", "Remotion", "Tailwind CSS", "AWS Lambda", "Cloudflare R2", "Stripe", "React", "ShadcnUI"]}
-                    casestudy={'/project/matchcut'}
-                />
-                <ProjectCard name={"Anya Website"} img={"/assets/projects/anya.png"} description={"I built this landing page for Anya, a Web3 game. I added a CMS for easy content updates, a blog section, and an interactive map feature. The final result looks clean and engaging."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS", "React Bits"]} link={"https://anyacity.netlify.app/"} />
-                <ProjectCard name={"Tanisha Web3 Consultant"} img={"/assets/projects/tanisha/banner.png"} description={"I delivered a complete website solution for a client who needed full control over her content. By integrating a Sanity CMS and automating her contact form with Google Sheets and Nodemailer, I built a system that empowered her to manage her business independently."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "Sanity CMS", "GoogleSheet Api", "Nodemailer", "Google Analytics"]} link={"https://tanishakatara.com/"} />
-                <ProjectCard name={"Snappet"} img={"/assets/projects/snappet/Banner.png"} description={"As a developer, I wanted a better way to share code snippets online. I built this tool with Next.js and Framer Motion to create a polished, engaging UI. The core feature converts styled HTML directly into a downloadable image, which was a fun frontend challenge."} tech={["Next.js", "Tailwind CSS", "Framer Motion", "ShadcnUI", "Monaco", "HTML to Image"]} link={"https://snappetio.netlify.app/"} />
-                <ProjectCard
-                    name={"Snappet CLI"}
-                    img={"/assets/projects/snappetcli/cover.png"}
-                    description={"To expand on my original Snappet app, I built this CLI version as an NPM package. This Node.js tool uses Puppeteer for headless browser automation, allowing developers to generate code screenshots directly from their terminal for a much faster workflow."}
-                    tech={["JavaScript", "Node.js", "Puppeteer", "DOM"]}
-                    link={"https://github.com/waleeddotdev/Snappet-CLI"}
-                />
-
-            </div>
-        </div>
-    )
-}
+        <ProjectCard
+          name={"HinglishMagic"}
+          img={"/assets/projects/hinglishmagic.jpeg"}
+          description={
+            "As a user of the Submagic tool, I needed Hinglish captions, but the app only generated Hindi. I took the initiative to build this Chrome extension to solve my own problem. It converts the Hindi output into easy-to-read Hinglish. The CEO of Submagic loved the idea and later added the feature to their official product."
+          }
+          tech={["JavaScript", "Chrome Extension", "Gemini API", "DOM"]}
+          link={"https://github.com/waleeddotdev/HinglishMagic"}
+          casestudy={"project/submagic"}
+        />
+        <ProjectCard
+          name={"Match-Cut AI (Micro Saas)"}
+          img={"/assets/projects/matchcut/cover.png"}
+          description={
+            "Creating cinematic match cuts is a huge challenge for video editors. This in-progress tool solves that by using AI to generate them automatically. It uses Remotion for programmatic video creation and AWS Lambda for serverless rendering, allowing creators to generate professional match cuts automatically and save hours of work."
+          }
+          tech={[
+            "Next.js",
+            "Supabase",
+            "Remotion",
+            "Tailwind CSS",
+            "AWS Lambda",
+            "Cloudflare R2",
+            "Stripe",
+            "React",
+            "ShadcnUI",
+          ]}
+          casestudy={"/project/matchcut"}
+        />
+        <ProjectCard
+          name={"Anya Website"}
+          img={"/assets/projects/anya.png"}
+          description={
+            "I built this landing page for Anya, a Web3 game. I added a CMS for easy content updates, a blog section, and an interactive map feature. The final result looks clean and engaging."
+          }
+          tech={[
+            "Next.js",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Sanity CMS",
+            "React Bits",
+          ]}
+          link={"https://anyacity.netlify.app/"}
+        />
+        <ProjectCard
+          name={"Tanisha Web3 Consultant"}
+          img={"/assets/projects/tanisha/banner.png"}
+          description={
+            "I delivered a complete website solution for a client who needed full control over her content. By integrating a Sanity CMS and automating her contact form with Google Sheets and Nodemailer, I built a system that empowered her to manage her business independently."
+          }
+          tech={[
+            "Next.js",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Sanity CMS",
+            "GoogleSheet Api",
+            "Nodemailer",
+            "Google Analytics",
+          ]}
+          link={"https://tanishakatara.com/"}
+        />
+        <ProjectCard
+          name={"Snappet"}
+          img={"/assets/projects/snappet/Banner.png"}
+          description={
+            "As a developer, I wanted a better way to share code snippets online. I built this tool with Next.js and Framer Motion to create a polished, engaging UI. The core feature converts styled HTML directly into a downloadable image, which was a fun frontend challenge."
+          }
+          tech={[
+            "Next.js",
+            "Tailwind CSS",
+            "Framer Motion",
+            "ShadcnUI",
+            "Monaco",
+            "HTML to Image",
+          ]}
+          link={"https://snappetio.netlify.app/"}
+        />
+        <ProjectCard
+          name={"Snappet CLI"}
+          img={"/assets/projects/snappetcli/cover.png"}
+          description={
+            "To expand on my original Snappet app, I built this CLI version as an NPM package. This Node.js tool uses Puppeteer for headless browser automation, allowing developers to generate code screenshots directly from their terminal for a much faster workflow."
+          }
+          tech={["JavaScript", "Node.js", "Puppeteer", "DOM"]}
+          link={"https://github.com/waleeddotdev/Snappet-CLI"}
+        />
+      </div>
+    </div>
+  );
+};
 
 export default MyProjects;
 
