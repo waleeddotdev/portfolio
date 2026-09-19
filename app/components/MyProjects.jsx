@@ -21,6 +21,24 @@ const MyProjects = () => {
       </div>
       <div className="w-full grid-cols-1 sm:grid-cols-2 py-5 grid gap-5">
         <ProjectCard
+          name={"QuranVid - AI Quran Video Generator"}
+          img={"/assets/projects/quranvid/cover.png"}
+          description={
+            "An AI-powered video creation tool featuring an integrated RAG AI agent that generates customized Quran ayah videos on demand. Users can prompt the AI agent for any verse, and it builds a ready-to-share video using Remotion and Vercel AI SDK. Features a prompt-driven editor with zero backend database requirement, utilizing local storage and user Gemini API keys."
+          }
+          tech={[
+            "Next.js",
+            "Remotion",
+            "Vercel AI SDK",
+            "Gemini API",
+            "Quran API",
+            "Tailwind CSS",
+            "RAG / AI Agent",
+          ]}
+          link={"http://quranvid.netlify.app/"}
+          casestudy={"/project/quranvid"}
+        />
+        <ProjectCard
           name={"AI Captioning Tool"}
           img={"/assets/projects/caption.jpg"}
           description={
