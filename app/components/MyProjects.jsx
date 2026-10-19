@@ -20,24 +20,7 @@ const MyProjects = () => {
         </h2>
       </div>
       <div className="w-full grid-cols-1 sm:grid-cols-2 py-5 grid gap-5">
-        <ProjectCard
-          name={"QuranVid - AI Quran Video Generator"}
-          img={"/assets/projects/quranvid/cover.png"}
-          description={
-            "An AI-powered video creation tool featuring an integrated RAG AI agent that generates customized Quran ayah videos on demand. Users can prompt the AI agent for any verse, and it builds a ready-to-share video using Remotion and Vercel AI SDK. Features a prompt-driven editor with zero backend database requirement, utilizing local storage and user Gemini API keys."
-          }
-          tech={[
-            "Next.js",
-            "Remotion",
-            "Vercel AI SDK",
-            "Gemini API",
-            "Quran API",
-            "Tailwind CSS",
-            "RAG / AI Agent",
-          ]}
-          link={"http://quranvid.netlify.app/"}
-          casestudy={"/project/quranvid"}
-        />
+      
         <ProjectCard
           name={"AI Captioning Tool"}
           img={"/assets/projects/caption.jpg"}
@@ -56,7 +39,7 @@ const MyProjects = () => {
           ]}
           casestudy={"/project/caption"}
         />
-        <ProjectCard
+          <ProjectCard
           name={"Ludi"}
           img={"/assets/projects/ludi/cover.png"}
           description={
@@ -74,6 +57,35 @@ const MyProjects = () => {
           link={"https://ludi.social"}
           casestudy={"/project/ludi"}
         />
+            <ProjectCard
+          name={"HinglishMagic"}
+          img={"/assets/projects/hinglishmagic.jpeg"}
+          description={
+            "As a user of the Submagic tool, I needed Hinglish captions, but the app only generated Hindi. I took the initiative to build this Chrome extension to solve my own problem. It converts the Hindi output into easy-to-read Hinglish. The CEO of Submagic loved the idea and later added the feature to their official product."
+          }
+          tech={["JavaScript", "Chrome Extension", "Gemini API", "DOM"]}
+          link={"https://github.com/waleeddotdev/HinglishMagic"}
+          casestudy={"project/submagic"}
+        />
+          <ProjectCard
+          name={"QuranVid - AI Quran Video Generator"}
+          img={"/assets/projects/quranvid/cover.png"}
+          description={
+            "An AI-powered video creation tool featuring an integrated RAG AI agent that generates customized Quran ayah videos on demand. Users can prompt the AI agent for any verse, and it builds a ready-to-share video using Remotion and Vercel AI SDK. Features a prompt-driven editor with zero backend database requirement, utilizing local storage and user Gemini API keys."
+          }
+          tech={[
+            "Next.js",
+            "Remotion",
+            "Vercel AI SDK",
+            "Gemini API",
+            "Quran API",
+            "Tailwind CSS",
+            "RAG / AI Agent",
+          ]}
+          link={"http://quranvid.netlify.app/"}
+          casestudy={"/project/quranvid"}
+        />
+      
         <ProjectCard
           name={"Neurogence"}
           img={"/assets/projects/neurogence.png"}
@@ -119,16 +131,7 @@ const MyProjects = () => {
           casestudy={"/project/ai-agent"}
         />
 
-        <ProjectCard
-          name={"HinglishMagic"}
-          img={"/assets/projects/hinglishmagic.jpeg"}
-          description={
-            "As a user of the Submagic tool, I needed Hinglish captions, but the app only generated Hindi. I took the initiative to build this Chrome extension to solve my own problem. It converts the Hindi output into easy-to-read Hinglish. The CEO of Submagic loved the idea and later added the feature to their official product."
-          }
-          tech={["JavaScript", "Chrome Extension", "Gemini API", "DOM"]}
-          link={"https://github.com/waleeddotdev/HinglishMagic"}
-          casestudy={"project/submagic"}
-        />
+    
         <ProjectCard
           name={"Match-Cut AI (Micro Saas)"}
           img={"/assets/projects/matchcut/cover.png"}
